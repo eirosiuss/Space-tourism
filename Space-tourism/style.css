@@ -47,16 +47,17 @@ select {
 }
 
 /* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
+@media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
-  }
+}
 
 /* -------------------------- */
 /* Utility classes                      */
@@ -64,7 +65,7 @@ select {
 
 .flex {
     display: flex;
-    gap: var(--gap, 1rem)    
+    gap: var(--gap, 1rem)
 }
 
 .grid {
@@ -74,18 +75,26 @@ select {
 
 .container {
     padding-inline: 2em;
-    max-width: 80rem;
+    max-width: 60rem;
     margin-inline: auto;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    /* added line */
+    border: 0;
+}
+
+.box {
+    background: lightblue;
+    padding: 3rem;
 }
